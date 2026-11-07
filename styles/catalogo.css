@@ -2,3 +2,23 @@
 .titulo-principal {
     text-align: center;
 }
+.card-title {
+    min-height: 45px;
+}
+
+
+
+/*ORGANIZACIÓN IMAGENES Y PORTADA*/
+.portada {
+    height: 400px;
+}
+.card {
+    width: 300px;
+    height: 800px;
+    padding: 1px;
+    margin: 20px;
+}
+
+
+
+
