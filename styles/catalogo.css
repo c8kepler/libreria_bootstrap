@@ -3,15 +3,16 @@
     text-align: center;
 }
 .card-title {
-    min-height: 45px;
+    min-height: 20px;
 }
-
 
 
 /*ORGANIZACIÓN IMAGENES Y PORTADA*/
 .portada {
     height: 400px;
 }
+
+/*TARJETAS*/
 .card {
     width: 300px;
     height: 800px;
