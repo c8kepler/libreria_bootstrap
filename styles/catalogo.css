@@ -12,6 +12,7 @@
     height: 400px;
 }
 
+
 /*TARJETAS*/
 .card {
     width: 300px;
@@ -19,6 +20,34 @@
     padding: 1px;
     margin: 20px;
 }
+
+
+/*FORMULARIO*/
+.etiqueta div {
+    display: block;
+    margin-bottom: 2rem;
+    text-align: center;
+    
+}
+.etiqueta label {
+    text-align: center;
+    padding-bottom: 0.5rem;
+}
+.etiqueta input {
+    width: 90%;
+}
+.etiqueta area {
+    margin-top:5rem ;
+}
+.comentario {
+    margin: 5rem;
+    margin-top: 1rem;
+}
+.area {
+    width: 100%;
+}
+
+
 
 
 
