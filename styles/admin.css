@@ -1,0 +1,59 @@
+body {
+    background-color: #f4f5f7;
+    font-family: Arial, sans-serif;
+    color: #212529;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+h3 {
+    color: #5b6470;
+}
+
+.titulo-panel {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+/* Tarjetas informativas */
+.tarjeta-indicador {
+    border: 1px solid #ced4da;
+    border-radius: 7px;
+    box-shadow: 0 2px 5px #00000010;
+}
+
+/* Número de las tarjetas */
+.numero-indicador {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Número de solicitudes pendientes */
+.numero-pendiente {
+    color: #c58a19;
+}
+
+/* Iconos de las tarjetas */
+.icono-tarjeta {
+    font-size: 30px;
+    color: #515965;
+}
+
+/* Tarjetas que contienen el formulario y las tablas */
+.panel-contenido {
+    padding: 12px;
+    border: 1px solid #CED4DA;
+    border-radius: 7px;
+    box-shadow: 0 2px 5px #D9DDE2;
+}
+
+/* Títulos de las secciones */
+.titulo-seccion {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
