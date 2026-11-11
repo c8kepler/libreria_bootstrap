@@ -120,6 +120,34 @@ form textarea {
     margin-top: 2rem;
 }
 
+/*LOGO*/
+.logo {
+    width: 100px;
+    height: 80px;
+    object-fit: contain;
+}
+
+/*BOTON CAMBIAR COLOR*/
+.tema-switch-input:checked + .tema-switch-slider {
+    background-color: #111044;
+}
+
+.tema-switch-input:checked + .tema-switch-slider::before {
+    transform: translate(1.75rem, -50%);
+}
+
+.tema-switch-input:checked + .tema-switch-slider .tema-switch-luna {
+    opacity: 1;
+}
+
+.tema-switch-input:checked + .tema-switch-slider .tema-switch-sol {
+    opacity: 0;
+}
+
+.tema-switch-input:focus-visible + .tema-switch-slider {
+    outline: 3px solid var(--bs-primary);
+    outline-offset: 3px;
+}
 
 
 
