@@ -82,18 +82,20 @@ form textarea {
     background-color: var(--apricot-cream);
 }
 .form-check {
-    display: flex !important ;        
-    align-items: center !important ;     
+    display: flex;        
+    justify-content: center;  
+    margin-bottom: 2rem; 
 }
 .form-check-label {
     font-weight: 900;
+    margin-bottom: 2rem;
 }
 .form-check-input {
     background-color: var(--apricot-cream);
+    margin-left: 5rem;
 }
 .etiqueta div {
     display: block;
-    margin-bottom: 2rem;
     text-align: center;
     
 }
