@@ -1,11 +1,21 @@
 /*RAÍZ*/
 :root {
---deep-walnut: #472e0bff;
---apricot-cream: #e8c99cff;
---olive-wood: #766741ff;
---faded-copper: #957b4bff;
---olive-wood-2: #806443ff;
---fuente-principal: 'Roboto', sans-serif;
+    --deep-walnut: #472e0bff;
+    --apricot-cream: #e8c99cff;
+    --olive-wood: #766741ff;
+    --faded-copper: #957b4bff;
+    --olive-wood-2: #806443ff;
+    --white-sky: #ffffff;
+    --fuente-principal: 'Roboto', sans-serif;
+}
+
+[data-bs-theme="dark"] {
+    --deep-walnut: #181005ff;     /* Fondo más profundo y oscuro */
+    --apricot-cream: #f4e1c9ff;   
+    --olive-wood: #a69363ff;      
+    --faded-copper: #c4a974ff;   
+    --olive-wood-2: #302418ff;  
+    --white-sky: #212529;
 }
 
 
@@ -13,7 +23,7 @@
 body {
     background-color: var(--olive-wood-2);
     font-family: var(--fuente-principal);
-}
+} /* Fondo más profundo y oscuro */
 
 
 
@@ -55,6 +65,10 @@ h1 {
 }
 .card-body {
     background-color: var(--apricot-cream);
+}
+
+.navbar {
+    background-color: var(--white-sky);
 }
 
 
@@ -128,6 +142,78 @@ form textarea {
 }
 
 /*BOTON CAMBIAR COLOR*/
+.tema-switch {
+    position: relative;
+    display: inline-block;
+    width: 3.5rem;
+    height: 1.6rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.tema-switch-input {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    margin: 0;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.tema-switch-slider {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0.5rem;
+    overflow: hidden;
+    border-radius: 999px;
+    background-color: #a9c7f5;
+    transition: background-color 0.25s ease;
+}
+
+.tema-switch-slider::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0.2rem;
+    z-index: 2;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    background-color: #ffffff;
+    transform: translateY(-50%);
+    transition: transform 0.25s ease;
+}
+
+.tema-switch-luna,
+.tema-switch-sol {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1rem;
+    font-size: 0.8rem;
+    line-height: 1;
+    color: #ffffff;
+    transition: opacity 0.25s ease;
+}
+
+.tema-switch-luna {
+    margin-left: auto;
+    opacity: 0;
+}
+
+.tema-switch-sol {
+    margin-right: auto;
+    opacity: 1;
+}
+
+/* Estado oscuro del interruptor */
 .tema-switch-input:checked + .tema-switch-slider {
     background-color: #111044;
 }
@@ -148,9 +234,3 @@ form textarea {
     outline: 3px solid var(--bs-primary);
     outline-offset: 3px;
 }
-
-
-
-
-
-
