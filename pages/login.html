@@ -9,13 +9,25 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
   </head>
 
   <body>
-    <select id="selectColor">
-      <option value="light">☀️</option>
-      <option value="dark">🌙</option>
-    </select>
+    <div id="tema-switch-contenedor">
+      <label class="tema-switch" for="tema-switch">
+        <input
+          class="tema-switch-input"
+          type="checkbox"
+          role="switch"
+          id="tema-switch"
+          aria-label="Cambiar tema"
+        />
+        <span class="tema-switch-slider" aria-hidden="true">
+          <span class="tema-switch-luna"><i class="bi bi-moon"></i></span>
+          <span class="tema-switch-sol"><i class="bi bi-sun"></i></span>
+        </span>
+      </label>
+    </div>
     <div class="container">
       <main>
         <img
