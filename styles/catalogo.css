@@ -1,10 +1,32 @@
+/*RAÍZ*/
+:root {
+--deep-walnut: #472e0bff;
+--apricot-cream: #e8c99cff;
+--olive-wood: #766741ff;
+--faded-copper: #957b4bff;
+--olive-wood-2: #806443ff;
+--fuente-principal: 'Roboto', sans-serif;
+}
+
+
+/*BODY*/
+body {
+    background-color: var(--olive-wood-2);
+    font-family: var(--fuente-principal);
+}
+
+
+
+
 /*TITULOS   */
 .titulo-principal {
     text-align: center;
 }
-.card-title {
-    min-height: 20px;
+h1 {
+    color: var(--apricot-cream);
+    font-weight: 800;
 }
+
 
 
 /*ORGANIZACIÓN IMAGENES Y PORTADA*/
@@ -13,16 +35,62 @@
 }
 
 
+
 /*TARJETAS*/
+.card-title {
+    min-height: 20px;
+    color: var(--deep-walnut);
+    font-weight: 800;
+}
 .card {
     width: 300px;
     height: 800px;
     padding: 1px;
     margin: 20px;
+    box-shadow: 0 4px 12px var(--apricot-cream);
+}
+.card-text {
+    color: var(--olive-wood-2);
+    font-weight: 500;
+}
+.card-body {
+    background-color: var(--apricot-cream);
 }
 
 
-/*FORMULARIO*/
+
+/*MODAL Y FORMULARIO*/
+.modal-content {
+    background-color: var(--apricot-cream);
+}
+.modal-title {
+    color: var(--olive-wood-2);
+    font-weight: 800;
+}
+form {
+    background-color: var(--olive-wood-2);
+    
+}
+form label {
+    color: var(--apricot-cream);
+    font-weight: 600;
+}
+form input {
+    background-color: var(--apricot-cream);
+}
+form textarea {
+    background-color: var(--apricot-cream);
+}
+.form-check {
+    display: flex !important ;        
+    align-items: center !important ;     
+}
+.form-check-label {
+    font-weight: 900;
+}
+.form-check-input {
+    background-color: var(--apricot-cream);
+}
 .etiqueta div {
     display: block;
     margin-bottom: 2rem;
@@ -34,7 +102,7 @@
     padding-bottom: 0.5rem;
 }
 .etiqueta input {
-    width: 90%;
+    width: 75%;
 }
 .etiqueta area {
     margin-top:5rem ;
@@ -46,6 +114,10 @@
 .area {
     width: 100%;
 }
+.nombre {
+    margin-top: 2rem;
+}
+
 
 
 
