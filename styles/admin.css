@@ -1,49 +1,63 @@
+:root {
+/* Paleta de colores */
+    --apricot-cream: #e8c99c;
+    --olive-wood: #766741;
+    --faded-copper: #957b4b;
+    --olive-wood-2: #806443;
+    --fuente-principal: 'Roboto', sans-serif;
+}
+
+
 body {
-    background-color: #f4f5f7;
-    font-family: Arial, sans-serif;
-    color: #212529;
+    background-color: var(--apricot-cream);
+    font-family: var(--fuente-principal);
+    color: #000000;
 }
 
 h3 {
-    color: #5b6470;
+    color: var(--olive-wood);
 }
 
 .titulo-panel {
     font-size: 28px;
     font-weight: bold;
     margin-bottom: 0;
+    color: var(--olive-wood);
 }
 
 /* Tarjetas informativas */
 .tarjeta-indicador {
-    border: 1px solid #ced4da;
+    background-color: #ffffff;
+    border: 1px solid var(--faded-copper);
     border-radius: 7px;
-    box-shadow: 0 2px 5px #00000010;
+    box-shadow: 0 2px 5px #766741;
 }
 
 /* Número de las tarjetas */
 .numero-indicador {
     font-size: 28px;
     font-weight: bold;
+    color: var(--olive-wood);
 }
 
 /* Número de solicitudes pendientes */
 .numero-pendiente {
-    color: #c58a19;
+    color: var(--faded-copper);
 }
 
 /* Iconos de las tarjetas */
 .icono-tarjeta {
     font-size: 30px;
-    color: #515965;
+    color: var(--olive-wood-2);
 }
 
 /* Tarjetas que contienen el formulario y las tablas */
 .panel-contenido {
     padding: 12px;
-    border: 1px solid #CED4DA;
+    background-color: #ffffff;
+    border: 1px solid var(--faded-copper);
     border-radius: 7px;
-    box-shadow: 0 2px 5px #D9DDE2;
+    box-shadow: 0 2px 5px #766741;
 }
 
 /* Títulos de las secciones */
@@ -51,34 +65,52 @@ h3 {
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 12px;
+    color: var(--olive-wood);
 }
 
 /* Labels del formulario */
 .form-label {
     font-weight: 500;
     margin-bottom: 5px;
+    color: var(--olive-wood);
 }
 
 /* Campos del formulario */
 .form-control {
-    border-color: #adb5bd;
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid var(--faded-copper);
     border-radius: 6px;
 }
 
 .form-select {
-    border-color: #adb5bd;
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid var(--faded-copper);
     border-radius: 6px;
 }
 
 /* Botón de guardar */
 .btn-primary {
-    background-color: #0d43c7;
-    border-color: #0d43c7;
+    background-color: var(--olive-wood-2);
+    border-color: var(--olive-wood-2);
 }
 
 .btn-primary:hover {
-    background-color: #0b36a3;
-    border-color: #0b36a3;
+    background-color: var(--olive-wood);
+    border-color: var(--olive-wood);
+}
+
+/* Botón cancelar */
+.btn-outline-secondary {
+    color: var(--olive-wood);
+    border-color: var(--olive-wood);
+}
+
+.btn-outline-secondary:hover {
+    background-color: var(--olive-wood);
+    border-color: var(--olive-wood);
+    color: #ffffff;
 }
 
 /* Portadas */
@@ -91,6 +123,10 @@ h3 {
 
 .table {
     font-size: 14px;
+    --bs-table-color: #000000;
+    --bs-table-bg: #ffffff;
+    --bs-table-striped-bg: var(--apricot-cream);
+    --bs-table-hover-bg: var(--faded-copper);
 }
 
 .table th {
@@ -102,4 +138,11 @@ h3 {
     font-size: 12px;
     padding: 6px 9px;
     border-radius: 5px;
+}
+
+
+.logo {
+    width: 100px;
+    height: 80px;
+    object-fit: contain;
 }

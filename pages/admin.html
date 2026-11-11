@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel de administración</title>
 
+    <!-- Fuente de texto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
@@ -13,6 +18,35 @@
     <link rel="stylesheet" href="../styles/admin.css">
 </head>
 <body>
+
+    
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top border-bottom">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../index.html">
+                <img src="../img/logo.png" alt="Logo" class="logo flex-row d-inline-block align-text-top me-2">
+            </a>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Catálogo de Libros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Iniciar sesión</a>
+                    </li>
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <button class="btn btn-outline-secondary btn-sm" id="cambioTema">
+                            <i class="bi bi-sun-fill" id="temaIcono"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
 
     <header class="container-fluid px-5 py-2 mt-4 mb-3">
         <h1 class="titulo-panel">
@@ -92,9 +126,9 @@
          </div>
     </div>
 
-    <main class="container-fluid px-5">
 
-        <!-- Contenido principal -->
+    <main class="container-fluid px-5">
+       
         <div class="row g-3">
     
             <!-- Formulario -->
@@ -207,7 +241,7 @@
                                         <td>100 años de soledad</td>
                                         <td>Gabriel García márquez</td>
                                         <td>
-                                            <span class="badge text-bg-primary">Narrativa</span>
+                                            <span class="badge text-bg-danger">Narrativa</span>
                                         </td>
                                         <td>
                                             <button type="button" class="btn btn-sm btn-outline-primary">
@@ -227,7 +261,7 @@
                                         <td>Don Quijote de la mancha</td>
                                         <td>Miguel de Cervantes</td>
                                         <td>
-                                            <span class="badge text-bg-primary">Narrativa</span>
+                                            <span class="badge text-bg-danger">Narrativa</span>
                                         </td>
                                         <td>
                                             <button type="button" class="btn btn-sm btn-outline-primary">
@@ -247,7 +281,7 @@
                                         <td>La era del capitalismo de la vigilancia</td>
                                         <td>Shoshana Zuboff</td>
                                         <td>
-                                            <span class="badge text-bg-primary">Tecnología</span>
+                                            <span class="badge text-bg-success">Tecnología</span>
                                         </td>
                                         <td>
                                             <button type="button" class="btn btn-sm btn-outline-primary">
@@ -307,7 +341,7 @@
                                         <td>Life in code: A personal history of technology</td>
                                         <td>Ellen Ullman</td>
                                         <td>
-                                            <span class="badge text-bg-primary">Tecnología</span>
+                                            <span class="badge text-bg-success">Tecnología</span>
                                         </td>
                                         <td>
                                             <button type="button" class="btn btn-sm btn-outline-primary">
@@ -391,6 +425,65 @@
         </div>
 
     </main>
+
+
+
+    <footer class="bg-body-tertiary text-body-secondary py-5 border-top mt-5">
+        <div class="container">
+            <div class="row g-4">
+
+                <div class="col-lg-6">
+                    <h5 class="text-body fw-bold mb-3">
+                        <img src="../img/logo.png" alt="Logo" class="logo d-inline-block align-text-top me-2">
+                    </h5>
+                    <p class="small text-muted mb-0">
+                        Un prototipo educativo diseñado con Bootstrap 5.3 para la gestión, consulta ágil de recursos bibliográficos y simulación de préstamos.
+                    </p>
+                </div>
+
+
+                <div class="col-sm-6 col-lg-3">
+                    <h6 class="text-body fw-bold text-uppercase small mb-3">Enlaces Útiles</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2">
+                            <a href="../index.html" class="text-decoration-none text-reset link-primary">Inicio</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="" class="text-decoration-none text-reset link-primary">Catálogo de Libros</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="" class="text-decoration-none text-reset link-primary">Iniciar sesión</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="col-sm-6 col-lg-3">
+                    <h6 class="text-body fw-bold text-uppercase small mb-3">Contacto</h6>
+                    <ul class="list-unstyled small text-muted">
+                        <li class="mb-2">
+                            <i class="bi bi-geo-alt-fill text-danger me-2"></i>Cra. 64 #50 – 52, Laureles
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-envelope-fill text-primary me-2"></i>info@libromente.com
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-telephone-fill text-success me-2"></i>+123 456 789
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <hr class="my-4 text-muted">
+
+
+            <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center small text-muted">
+                <p class="mb-2 mb-sm-0">&copy; 2026 Libromente. Todos los derechos reservados.</p>
+                <p class="mb-0">Desarrollado en equipo para fines académicos.</p>
+            </div>
+        </div>
+    </footer>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
