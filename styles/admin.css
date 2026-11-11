@@ -57,3 +57,31 @@ h3 {
     font-weight: bold;
     margin-bottom: 12px;
 }
+
+/* Labels del formulario */
+.form-label {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+/* Campos del formulario */
+.form-control {
+    border-color: #adb5bd;
+    border-radius: 6px;
+}
+
+.form-select {
+    border-color: #adb5bd;
+    border-radius: 6px;
+}
+
+/* Botón de guardar */
+.btn-primary {
+    background-color: #0d43c7;
+    border-color: #0d43c7;
+}
+
+.btn-primary:hover {
+    background-color: #0b36a3;
+    border-color: #0b36a3;
+}
