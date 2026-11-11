@@ -4,11 +4,6 @@ body {
     color: #212529;
 }
 
-h1 {
-    font-size: 28px;
-    font-weight: bold;
-}
-
 h3 {
     color: #5b6470;
 }
@@ -84,4 +79,27 @@ h3 {
 .btn-primary:hover {
     background-color: #0b36a3;
     border-color: #0b36a3;
+}
+
+/* Portadas */
+.portada-libro {
+    width: 45px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.table {
+    font-size: 14px;
+}
+
+.table th {
+    font-weight: 600;
+}
+
+/* Etiquetas de categoría */
+.badge {
+    font-size: 12px;
+    padding: 6px 9px;
+    border-radius: 5px;
 }
