@@ -6,27 +6,23 @@
     --faded-copper: #957b4bff;
     --olive-wood-2: #806443ff;
     --white-sky: #ffffff;
-    --fuente-principal: 'Roboto', sans-serif;
+    --fuente-principal: "Roboto", sans-serif;
 }
 
 [data-bs-theme="dark"] {
-    --deep-walnut: #181005ff;     /* Fondo más profundo y oscuro */
-    --apricot-cream: #f4e1c9ff;   
-    --olive-wood: #a69363ff;      
-    --faded-copper: #c4a974ff;   
-    --olive-wood-2: #302418ff;  
+    --deep-walnut: #181005ff; 
+    --apricot-cream: #f4e1c9ff;
+    --olive-wood: #a69363ff;
+    --faded-copper: #c4a974ff;
+    --olive-wood-2: #302418ff;
     --white-sky: #212529;
 }
-
 
 /*BODY*/
 body {
     background-color: var(--olive-wood-2);
     font-family: var(--fuente-principal);
 } /* Fondo más profundo y oscuro */
-
-
-
 
 /*TITULOS   */
 .titulo-principal {
@@ -35,16 +31,13 @@ body {
 h1 {
     color: var(--apricot-cream);
     font-weight: 800;
+    margin-top: 2rem;
 }
-
-
 
 /*ORGANIZACIÓN IMAGENES Y PORTADA*/
 .portada {
     height: 400px;
 }
-
-
 
 /*TARJETAS*/
 .card-title {
@@ -53,11 +46,13 @@ h1 {
     font-weight: 800;
 }
 .card {
-    width: 300px;
+    width: 100%;
     height: 800px;
     padding: 1px;
-    margin: 20px;
+    margin: 2rem;
     box-shadow: 0 4px 12px var(--apricot-cream);
+    transition: transform 0.30 ease;
+
 }
 .card-text {
     color: var(--olive-wood-2);
@@ -66,12 +61,27 @@ h1 {
 .card-body {
     background-color: var(--apricot-cream);
 }
+.card:hover {
+    transform: scale(1.03);
+}
+.btn-solicitar {
+    background-color: var(--deep-walnut);
+    color: var(--apricot-cream);
+    font-weight: 700;
+    transition: transform 0.25 ease;
+}
+.btn-solicitar:hover {
+    background-color: var(--olive-wood-2);
+    border-color: var(--olive-wood-2);
+    color: var(--apricot-cream);
+    font-weight: 700;
+    transform: scale(1.05);
+}
 
+/*NAVBAR*/
 .navbar {
     background-color: var(--white-sky);
 }
-
-
 
 /*MODAL Y FORMULARIO*/
 .modal-content {
@@ -83,7 +93,6 @@ h1 {
 }
 form {
     background-color: var(--olive-wood-2);
-    
 }
 form label {
     color: var(--apricot-cream);
@@ -96,9 +105,9 @@ form textarea {
     background-color: var(--apricot-cream);
 }
 .form-check {
-    display: flex;        
-    justify-content: center;  
-    margin-bottom: 2rem; 
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
 }
 .form-check-label {
     font-weight: 900;
@@ -111,7 +120,6 @@ form textarea {
 .etiqueta div {
     display: block;
     text-align: center;
-    
 }
 .etiqueta label {
     text-align: center;
@@ -121,7 +129,7 @@ form textarea {
     width: 75%;
 }
 .etiqueta area {
-    margin-top:5rem ;
+    margin-top: 5rem;
 }
 .comentario {
     margin: 5rem;
@@ -132,6 +140,13 @@ form textarea {
 }
 .nombre {
     margin-top: 2rem;
+}
+
+input::placeholder {
+    color: var(--olive-wood-2);
+}
+textarea::placeholder {
+    color: var(--olive-wood-2);
 }
 
 /*LOGO*/
@@ -186,7 +201,7 @@ form textarea {
     border-radius: 50%;
     background-color: #ffffff;
     transform: translateY(-50%);
-    transition: transform 0.25s ease;
+    transition: 0.25s ease;
 }
 
 .tema-switch-luna,
