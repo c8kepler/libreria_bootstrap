@@ -1,37 +1,59 @@
 <!DOCTYPE html>
 <html lang="es" data-bs-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Libro mente - Inicio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="./estilos/estilos.css">
+    <link rel="stylesheet" href="./styles/estilos.css">
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">
-                <img src="./img/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top me-2">
-                Libromente
+                <img src="./img/logo.png" alt="Logo" class="logo flex-row d-inline-block align-text-top me-2">
             </a>
-            <div class="collapse navbar-collapse" id="navbar">
-                <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Catálogo de Libros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Iniciar sesión</a>
-                    </li>
-                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-                        <button class="btn btn-outline-secondary btn-sm" id="cambioTema">
-                            <i class="bi bi-sun-fill" id="temaIcono"></i>
-                        </button>
-                    </li>
-                </ul>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto align-items-center fw-bold">
+                <li class="nav-item me-4">
+                    <a class="nav-link active navegacion" aria-current="page" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item me-4">
+                    <a class="nav-link navegacion" href="./pages/admin.html">Catálogo de Libros</a>
+                </li>
+                <li class="nav-item me-4">
+                    <a class="nav-link rounded-pill inicio" href="./pages/catalogo.html">Iniciar sesión</a>
+                </li>
+                <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+              <label class="tema-switch" for="tema-switch">
+                <input
+                  class="tema-switch-input"
+                  type="checkbox"
+                  role="switch"
+                  id="tema-switch"
+                  aria-label="Cambiar tema"
+                />
+
+                <span class="tema-switch-slider" aria-hidden="true">
+                  <span class="tema-switch-luna">
+                    <i class="bi bi-moon"></i>
+                  </span>
+
+                  <span class="tema-switch-sol">
+                    <i class="bi bi-sun"></i>
+                  </span>
+                </span>
+              </label>
+            </li>
+            </ul>
             </div>
         </div>
     </nav>
@@ -39,7 +61,8 @@
 
     <header id="carrusel" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carrusel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carrusel" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carrusel" data-bs-slide-to="1" aria-label="Slide 2"></button>
         </div>
         <div class="carousel-inner">
@@ -48,14 +71,17 @@
                 <img src="./img/biblioteca.jpg" alt="Biblioteca" class="d-block w-100 h-100 object-fit-cover">
                 <div class="carousel-caption d-flex flex-column justify-content-center h-100">
                     <h1 class="display-4 fw-bold">Bienvenidos a Libromente</h1>
-                    <p class="lead">Tu portal digital hacia el conocimiento infinito. Explora y solicita préstamos fácilmente.</p>
+                    <p class="lead">Tu portal digital hacia el conocimiento infinito. Explora y solicita préstamos
+                        fácilmente.</p>
                     <div>
-                        <a href="" class="btn btn-primary btn-lg mt-3 me-2">Ver Catálogo</a>
+                        <a href="" class="btn btn-outline-light btn-lg mt-3">Ver Catálogo</a>
                     </div>
                 </div>
             </div>
-  
-            <div class="carousel-item" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://unsplash.com') center/cover; height: 70vh;">
+
+            <div class="carousel-item h-100">
+                <img src="./img/cooworking.jpg" alt="Espacios de Co-working"
+                    class="d-block w-100 h-100 object-fit-cover">
                 <div class="carousel-caption d-flex flex-column justify-content-center h-100">
                     <h1 class="display-4 fw-bold">Espacios de Co-working</h1>
                     <p class="lead">Contamos con salas de estudio, internet de alta velocidad y talleres semanales.</p>
@@ -82,39 +108,45 @@
                 <p class="text-muted">Todo lo que necesitas para potenciar tu lectura y aprendizaje</p>
             </div>
             <div class="row g-4">
-        
+
                 <div class="col-md-4">
-                    <div class="card h-100 text-center border-0 shadow-sm p-4">
+                    <div class="card h-100 text-center border-0 shadow-sm p-4 resalto">
                         <div class="card-body">
-                            <div class="bg-primary-subtle text-primary fs-2 rounded-3 py-2 px-3 d-inline-flex align-items-center justify-content-center mb-3">
+                            <div
+                                class="bg-primary-subtle text-primary fs-2 rounded-3 py-2 px-3 d-inline-flex align-items-center justify-content-center mb-3">
                                 <i class="bi bi-journal-bookmark-fill"></i>
                             </div>
                             <h4 class="card-title fw-semibold">Préstamo Digital</h4>
-                            <p class="card-text text-muted">Consulta la disponibilidad de libros en línea y simula tu solicitud de préstamo en segundos.</p>
+                            <p class="card-text text-muted">Consulta la disponibilidad de libros en línea y simula tu
+                                solicitud de préstamo en segundos.</p>
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="col-md-4">
-                    <div class="card h-100 text-center border-0 shadow-sm p-4">
+                    <div class="card h-100 text-center border-0 shadow-sm p-4 resalto">
                         <div class="card-body">
-                            <div class="bg-success-subtle text-success fs-2 rounded-3 py-2 px-3 d-inline-flex align-items-center justify-content-center mb-3">
+                            <div
+                                class="bg-success-subtle text-success fs-2 rounded-3 py-2 px-3 d-inline-flex align-items-center justify-content-center mb-3">
                                 <i class="bi bi-laptop"></i>
                             </div>
                             <h4 class="card-title fw-semibold">Salas de Estudio</h4>
-                            <p class="card-text text-muted">Espacios cómodos y equipados con computadores y redes de navegación abierta para tus trabajos.</p>
+                            <p class="card-text text-muted">Espacios cómodos y equipados con computadores y redes de
+                                navegación abierta para tus trabajos.</p>
                         </div>
                     </div>
                 </div>
- 
+
                 <div class="col-md-4">
-                    <div class="card h-100 text-center border-0 shadow-sm p-4">
+                    <div class="card h-100 text-center border-0 shadow-sm p-4 resalto">
                         <div class="card-body">
-                            <div class="bg-warning-subtle text-warning fs-2 rounded-3 py-2 px-3 d-inline-flex align-items-center justify-content-center mb-3">
+                            <div
+                                class="bg-warning-subtle text-warning fs-2 rounded-3 py-2 px-3 d-inline-flex align-items-center justify-content-center mb-3">
                                 <i class="bi bi-people-fill"></i>
                             </div>
                             <h4 class="card-title fw-semibold">Actividades Culturales</h4>
-                            <p class="card-text text-muted">Clubes de lectura, cuentacuentos para niños y presentaciones de libros todas las semanas.</p>
+                            <p class="card-text text-muted">Clubes de lectura, cuentacuentos para niños y presentaciones
+                                de libros todas las semanas.</p>
                         </div>
                     </div>
                 </div>
@@ -127,15 +159,16 @@
             <div class="row align-items-center g-5">
                 <div class="col-lg-6">
                     <h2 class="fw-bold mb-4">Horarios de Atención</h2>
-                    <p class="text-muted mb-4">Te esperamos en nuestras instalaciones físicas. Recuerda que la plataforma web de simulación de préstamos funciona las 24 horas.</p>
-                    <ul class="list-group list-group-flush shadow-sm rounded">
+                    <p class="text-muted mb-4">Te esperamos en nuestras instalaciones físicas. Recuerda que la
+                        plataforma web de simulación de préstamos funciona las 24 horas.</p>
+                    <ul class="list-group list-group-flush shadow-sm rounded resalto">
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             <span>Lunes a Viernes</span>
-                            <span class="badge bg-primary rounded-pill">08:00 AM - 08:00 PM</span>
+                            <span class="badge tema1 rounded-pill">08:00 AM - 08:00 PM</span>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             <span>Sábados</span>
-                            <span class="badge bg-secondary rounded-pill">09:00 AM - 04:00 PM</span>
+                            <span class="badge tema2 rounded-pill">09:00 AM - 04:00 PM</span>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             <span>Domingos y Festivos</span>
@@ -144,30 +177,29 @@
                     </ul>
                 </div>
                 <div class="col-lg-6">
-                    <div class="p-4 bg-body rounded shadow-sm">
+                    <div class="p-4 bg-body rounded shadow-sm resalto">
                         <h4 class="fw-bold mb-3"><i class="bi bi-geo-alt-fill text-danger me-2"></i>Ubicación</h4>
                         <p class="text-muted">Cra. 64 #50 – 52, Laureles - Medellín</p>
 
-                        <div class="bg-secondary-subtle rounded d-flex align-items-center justify-content-center" style="height: 200px;">
-                            <span class="text-muted"><i class="bi bi-map me-2"></i>[Mapa del Prototipo]</span>
-                        </div>
+                        <img src="./img/mapa.png" alt="Mapa de ubicación" class="img-fluid rounded">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-<footer class="text-body-secondary py-5 border-top">
+    <footer class="text-body-secondary py-5 border-top">
         <div class="container">
             <div class="row g-4">
 
                 <div class="col-lg-6">
                     <h5 class="text-body fw-bold mb-3">
-                        <img src="./img/logo.png" alt="Logo" width="24" height="20" class="d-inline-block align-text-top me-2">
-                        Libromente
+                        <img src="./img/logo.png" alt="Logo" width="24" height="20"
+                            class="logo d-inline-block align-text-top me-2">
                     </h5>
                     <p class="small text-muted mb-0">
-                        Un prototipo educativo diseñado con Bootstrap 5.3 para la gestión, consulta ágil de recursos bibliográficos y simulación de préstamos.
+                        Un prototipo educativo diseñado con Bootstrap 5.3 para la gestión, consulta ágil de recursos
+                        bibliográficos y simulación de préstamos.
                     </p>
                 </div>
 
@@ -179,10 +211,10 @@
                             <a href="index.html" class="text-decoration-none text-reset link-primary">Inicio</a>
                         </li>
                         <li class="mb-2">
-                            <a href="" class="text-decoration-none text-reset link-primary">Catálogo de Libros</a>
+                            <a href="./pages/catalogo.html" class="text-decoration-none text-reset link-primary">Catálogo de Libros</a>
                         </li>
                         <li class="mb-2">
-                            <a href="" class="text-decoration-none text-reset link-primary">Iniciar sesión</a>
+                            <a href="./pages/catalogo.html" class="text-decoration-none text-reset link-primary">Iniciar sesión</a>
                         </li>
                     </ul>
                 </div>
@@ -195,7 +227,7 @@
                             <i class="bi bi-geo-alt-fill text-danger me-2"></i>Cra. 64 #50 – 52, Laureles
                         </li>
                         <li class="mb-2">
-                            <i class="bi bi-envelope-fill text-primary me-2"></i>info@libromente.com
+                            <i class="bi bi-envelope-fill text-primary me-2"></i><a href="mailto: infor@libremente.com">info@libromente.com</a>
                         </li>
                         <li class="mb-2">
                             <i class="bi bi-telephone-fill text-success me-2"></i>+57 300 000 0000
@@ -216,4 +248,5 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
