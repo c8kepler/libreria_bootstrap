@@ -7,8 +7,8 @@ pagina.setAttribute("data-bs-theme", temaInicial);
 selectorTema.checked = temaInicial === "dark";
 
 selectorTema.addEventListener("change", () => {
-    const temaSeleccionado = selectorTema.checked ? "dark" : "light";
+  const temaSeleccionado = selectorTema.checked ? "dark" : "light";
 
-    pagina.setAttribute("data-bs-theme", temaSeleccionado);
-    localStorage.setItem("tema", temaSeleccionado);
+  pagina.setAttribute("data-bs-theme", temaSeleccionado);
+  localStorage.setItem("tema", temaSeleccionado);
 });
