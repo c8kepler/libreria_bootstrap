@@ -1,8 +1,33 @@
+:root {
+    --background: #FBF8F5;
+    --bg-cards: #F2EAE1;
+    --main-text: #2A1F1B;
+    --second-text: #6E5D53; 
+    --border: #E2D7CC;
+    --main-btn: #8C4A2F;
+    --second-btn: #C88A58;
+
+    --fuente-principal: 'Roboto', sans-serif;
+}
+
+[data-bs-theme="dark"] { 
+    --background: #181311;  /* Fondo Base / Lienzo */
+    --bg-cards: #241C18;  /* Superficie / Tarjetas / Modales */
+    --main-text: #F3ECE4; /* Texto Principal (Encabezados y lectura) */
+    --second-text: #B5A599; /* Texto Secundario / Metadatos (Autor, género, fecha) */
+    --border: #3D312A; /* Bordes */
+    --main-btn: #D97746; /* Color directo botón (No hover) */
+    --second-btn: #E5A96E; /* Hover, etiquetas, tags */
+}
+
+
+
 body {
   min-height: 100vh;
+  font-family: var(--fuente-principal);
   place-items: center;
-  padding: 1rem;
   display: grid;
+  background-color: var(--background);
   }
 
 main {
@@ -10,21 +35,34 @@ main {
   align-items: center;
   max-width: 28rem;
   padding: 2rem;
-  border: 1px solid var(--bs-border-color);
+  border: 1px solid var(--border);
   border-radius: 1rem;
-  background-color: var(--bs-body-bg);
+  background-color: var(--bg-cards);
   color: var(--bs-body-color);
   box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
 }
+
+.logo {
+  align-items: center; 
+  display: block;
+  margin: 0 auto 1rem;
+  width: 100px;
+  height: 80px;
+  object-fit: contain;
+}
+
 
 img {
   align-items: center; 
   display: block;
   margin: 0 auto 1rem;
+  width: 200px;
 }
 
 form > div {
   margin-bottom: 1rem;
+  background-color: var(--bg-cards);
 }
 
 form label {
@@ -45,6 +83,15 @@ form button {
   margin: 0.5rem 0 0;
   }
 
+.btn {
+  background-color: var(--main-btn);
+  font-weight: 700;
+}
+
+.btn:hover {
+  background-color: var(--second-btn);
+}
+
 main > a {
   display: block;
   margin-top: 1rem;
@@ -61,11 +108,12 @@ p {
     top: 1rem;
     right: 1rem;    
 }
-
 .container {
   display: flex;
   justify-content: center;
 }
+
+
 #tema-switch-contenedor {
   position: fixed;
   top: 1rem;
@@ -135,6 +183,7 @@ p {
   transition: opacity 0.25s ease;
 }
 
+
 .tema-switch-luna {
   margin-left: auto;
   opacity: 0;
@@ -166,3 +215,10 @@ p {
   outline: 3px solid var(--bs-primary);
   outline-offset: 3px;
 }
+
+
+.navbar, footer {
+  background-color: var(--bg-cards);
+}
+
+
