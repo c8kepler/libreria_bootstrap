@@ -48,12 +48,15 @@ h1 {
     color: var(--main-text);
     font-weight: 800;
 }
+.autor {
+    color: var(--second-text);
+}
 .card {
     width: 100%;
     height: 800px;
     padding: 1px;
     margin: 2rem;
-    box-shadow: 0 4px 12px var(--apricot-cream);
+    box-shadow: 0 4px 12px var(--second-btn);
     transition: transform 0.30 ease;
 
 }
@@ -69,21 +72,21 @@ h1 {
 }
 .btn-solicitar {
     background-color: var(--main-btn);
-    color: var(--apricot-cream);
+    color: var(--main-text);
     font-weight: 700;
     transition: transform 0.25 ease;
 }
 .btn-solicitar:hover {
     background-color: var(--second-btn);
     border-color: var(--second-btn);
-    color: var(--apricot-cream);
+    color: var(--main-text);
     font-weight: 700;
     transform: scale(1.05);
 }
 
 /*NAVBAR*/
 .navbar {
-    background-color: var(--background);
+    background-color: var(--bg-cards);
 }
 
 /*MODAL Y FORMULARIO*/
@@ -135,7 +138,7 @@ form textarea {
     margin-bottom: 2rem;
 }
 .form-check-input {
-    background-color: var(--apricot-cream);
+    background-color: var(--background);
     margin-left: 5rem;
 }
 .etiqueta div {
@@ -269,4 +272,9 @@ textarea::placeholder {
 .tema-switch-input:focus-visible + .tema-switch-slider {
     outline: 3px solid var(--bs-primary);
     outline-offset: 3px;
+}
+
+/*FOOTER*/
+.footer {
+    background-color: var(--bg-cards);
 }
