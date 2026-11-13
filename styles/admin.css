@@ -1,34 +1,65 @@
 :root {
-/* Paleta de colores */
-    --apricot-cream: #e8c99c;
-    --olive-wood: #766741;
-    --faded-copper: #957b4b;
-    --olive-wood-2: #806443;
+    --background: #FBF8F5;  /* Fondo Base / Lienzo */
+    --bg-cards: #F2EAE1;    /* Superficie / Tarjetas / Modales */
+    --main-text: #2A1F1B;   /* Texto Principal (Encabezados y lectura) */
+    --second-text: #6E5D53; /* Texto Secundario / Metadatos (Autor, género, fecha) */
+    --border: #E2D7CC;      /* Bordes */
+    --main-btn: #8C4A2F;    /* Color directo botón (No hover) */
+    --second-btn: #C88A58;  /* Hover, etiquetas, tags */
+
     --fuente-principal: 'Roboto', sans-serif;
+}
+
+[data-bs-theme="light"] {
+    --background: #FBF8F5; 
+    --bg-cards: #F2EAE1;    
+    --main-text: #2A1F1B;   
+    --second-text: #6E5D53; 
+    --border: #E2D7CC;      
+    --main-btn: #8C4A2F;    
+    --second-btn: #C88A58;  
+}
+
+[data-bs-theme="dark"] { 
+    --background: #181311;  
+    --bg-cards: #241C18;  
+    --main-text: #F3ECE4; 
+    --second-text: #B5A599; 
+    --border: #3D312A; 
+    --main-btn: #D97746; 
+    --second-btn: #E5A96E; 
 }
 
 
 body {
-    background-color: var(--apricot-cream);
+    background-color: var(--background);
     font-family: var(--fuente-principal);
-    color: #000000;
+    color: var(--main-text);
+}
+
+.navbar, footer {
+    background-color: var(--bg-cards);
 }
 
 h3 {
-    color: var(--olive-wood);
+    color: var(--second-text);
+}
+
+small {
+    color: var(--second-text);
 }
 
 .titulo-panel {
     font-size: 28px;
     font-weight: bold;
     margin-bottom: 0;
-    color: var(--olive-wood);
+    color: var(--main-text);
 }
 
 /* Tarjetas informativas */
 .tarjeta-indicador {
-    background-color: #ffffff;
-    border: 1px solid var(--faded-copper);
+    background-color: var(--bg-cards);
+    border: 1px solid var(--border);
     border-radius: 7px;
     box-shadow: 0 2px 5px #766741;
 }
@@ -37,25 +68,25 @@ h3 {
 .numero-indicador {
     font-size: 28px;
     font-weight: bold;
-    color: var(--olive-wood);
+    color: var(--main-text);
 }
 
 /* Número de solicitudes pendientes */
 .numero-pendiente {
-    color: var(--faded-copper);
+    color: var(--second-text);
 }
 
 /* Iconos de las tarjetas */
 .icono-tarjeta {
     font-size: 30px;
-    color: var(--olive-wood-2);
+    color: var(--main-btn);
 }
 
 /* Tarjetas que contienen el formulario y las tablas */
 .panel-contenido {
     padding: 12px;
-    background-color: #ffffff;
-    border: 1px solid var(--faded-copper);
+    background-color: var(--bg-cards);
+    border: 1px solid var(--border);
     border-radius: 7px;
     box-shadow: 0 2px 5px #766741;
 }
@@ -65,52 +96,54 @@ h3 {
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 12px;
-    color: var(--olive-wood);
+    color: var(--main-text);
 }
 
 /* Labels del formulario */
 .form-label {
     font-weight: 500;
     margin-bottom: 5px;
-    color: var(--olive-wood);
+    color: var(--second-text);
 }
 
 /* Campos del formulario */
 .form-control {
-    background-color: #ffffff;
+    background-color: var(--background);
     color: #000000;
-    border: 1px solid var(--faded-copper);
+    border: 1px solid var(--border);
     border-radius: 6px;
 }
 
 .form-select {
-    background-color: #ffffff;
-    color: #000000;
-    border: 1px solid var(--faded-copper);
+    background-color: var(--background);
+    color: var(--second-text);
+    border: 1px solid var(--border);
     border-radius: 6px;
 }
 
 /* Botón de guardar */
 .btn-primary {
-    background-color: var(--olive-wood-2);
-    border-color: var(--olive-wood-2);
+    background-color: var(--main-btn);
+    border-color: var(--border);
 }
 
 .btn-primary:hover {
-    background-color: var(--olive-wood);
-    border-color: var(--olive-wood);
+    background-color: var(--second-btn);
+    border-color: var(--border);
+    color: #000000;
 }
 
 /* Botón cancelar */
 .btn-outline-secondary {
-    color: var(--olive-wood);
-    border-color: var(--olive-wood);
+    background-color: var(--second-btn);
+    border-color: var(--border);
+    color: #ffffff;
 }
 
 .btn-outline-secondary:hover {
-    background-color: var(--olive-wood);
-    border-color: var(--olive-wood);
-    color: #ffffff;
+    background-color: var(--main-btn);
+    border-color: var(--border);
+    color: #000000;
 }
 
 /* Portadas */
@@ -124,14 +157,15 @@ h3 {
 .table {
     font-size: 14px;
     --bs-table-color: #000000;
-    --bs-table-bg: #ffffff;
-    --bs-table-striped-bg: var(--apricot-cream);
-    --bs-table-hover-bg: var(--faded-copper);
+    --bs-table-bg: var(--background);
+    --bs-table-striped-bg: var(--second-btn);
+    --bs-table-hover-bg: var(--main-btn);
 }
 
-.table th {
-    font-weight: 600;
+.table-title {
+    background-color: var(--bg-cards);
 }
+
 
 /* Etiquetas de categoría */
 .badge {
