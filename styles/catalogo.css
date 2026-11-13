@@ -1,26 +1,29 @@
 /*RAÍZ*/
 :root {
-    --deep-walnut: #472e0bff;
-    --apricot-cream: #e8c99cff;
-    --olive-wood: #766741ff;
-    --faded-copper: #957b4bff;
-    --olive-wood-2: #806443ff;
-    --white-sky: #ffffff;
-    --fuente-principal: "Roboto", sans-serif;
+    --background: #FBF8F5;
+    --bg-cards: #F2EAE1;
+    --main-text: #2A1F1B;
+    --second-text: #6E5D53; 
+    --border: #E2D7CC;
+    --main-btn: #8C4A2F;
+    --second-btn: #C88A58;
+
+    --fuente-principal: 'Roboto', sans-serif;
 }
 
-[data-bs-theme="dark"] {
-    --deep-walnut: #181005ff; 
-    --apricot-cream: #f4e1c9ff;
-    --olive-wood: #a69363ff;
-    --faded-copper: #c4a974ff;
-    --olive-wood-2: #302418ff;
-    --white-sky: #212529;
+[data-bs-theme="dark"] { 
+    --background: #181311;  /* Fondo Base / Lienzo */
+    --bg-cards: #241C18;  /* Superficie / Tarjetas / Modales */
+    --main-text: #F3ECE4; /* Texto Principal (Encabezados y lectura) */
+    --second-text: #B5A599; /* Texto Secundario / Metadatos (Autor, género, fecha) */
+    --border: #3D312A; /* Bordes */
+    --main-btn: #D97746; /* Color directo botón (No hover) */
+    --second-btn: #E5A96E; /* Hover, etiquetas, tags */
 }
 
 /*BODY*/
 body {
-    background-color: var(--olive-wood-2);
+    background-color: var(--background);
     font-family: var(--fuente-principal);
 } /* Fondo más profundo y oscuro */
 
@@ -29,7 +32,7 @@ body {
     text-align: center;
 }
 h1 {
-    color: var(--apricot-cream);
+    color: var(--main-text);
     font-weight: 800;
     margin-top: 2rem;
 }
@@ -42,7 +45,7 @@ h1 {
 /*TARJETAS*/
 .card-title {
     min-height: 20px;
-    color: var(--deep-walnut);
+    color: var(--main-text);
     font-weight: 800;
 }
 .card {
@@ -55,24 +58,24 @@ h1 {
 
 }
 .card-text {
-    color: var(--olive-wood-2);
+    color: var(--main-text);
     font-weight: 500;
 }
 .card-body {
-    background-color: var(--apricot-cream);
+    background-color: var(--bg-cards);
 }
 .card:hover {
     transform: scale(1.03);
 }
 .btn-solicitar {
-    background-color: var(--deep-walnut);
+    background-color: var(--main-btn);
     color: var(--apricot-cream);
     font-weight: 700;
     transition: transform 0.25 ease;
 }
 .btn-solicitar:hover {
-    background-color: var(--olive-wood-2);
-    border-color: var(--olive-wood-2);
+    background-color: var(--second-btn);
+    border-color: var(--second-btn);
     color: var(--apricot-cream);
     font-weight: 700;
     transform: scale(1.05);
@@ -80,29 +83,47 @@ h1 {
 
 /*NAVBAR*/
 .navbar {
-    background-color: var(--white-sky);
+    background-color: var(--background);
 }
 
 /*MODAL Y FORMULARIO*/
 .modal-content {
-    background-color: var(--apricot-cream);
+    background-color: var(--bg-cards);
 }
 .modal-title {
-    color: var(--olive-wood-2);
+    color: var(--main-text);
     font-weight: 800;
 }
+.btn-modal {
+    background-color: var(--main-btn);
+    color: var(--main-text);
+    font-weight: 700;
+}
+.btn-modal:hover {
+    background-color: var(--second-btn);
+    color: var(--main-text);
+}
+.btn-secondary {
+    background-color: var(--second-btn);
+    color: var(--main-text);
+    font-weight: 700;
+}
+.btn-secondary:hover {
+    background-color: var(--main-btn);
+    color: var(--main-text);
+}
 form {
-    background-color: var(--olive-wood-2);
+    background-color: var(--background);
 }
 form label {
-    color: var(--apricot-cream);
+    color: var(--second-text);
     font-weight: 600;
 }
 form input {
-    background-color: var(--apricot-cream);
+    background-color: var(--background);
 }
 form textarea {
-    background-color: var(--apricot-cream);
+    background-color: var(--background);
 }
 .form-check {
     display: flex;
@@ -143,10 +164,10 @@ form textarea {
 }
 
 input::placeholder {
-    color: var(--olive-wood-2);
+    color: var(--second-text);
 }
 textarea::placeholder {
-    color: var(--olive-wood-2);
+    color: var(--second-text);
 }
 
 /*LOGO*/
