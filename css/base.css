@@ -60,6 +60,25 @@ img {
   width: 200px;
 }
 
+.inicio {
+    color: var(--main-btn);
+    border: solid 2px;
+    border-color: var(--main-btn);
+}
+
+.inicio:hover {
+  background-color: var(--main-text);
+  border-color: var(--main-text);
+  color: var(--background);
+}
+.navegacion {
+    color: var(--main-btn) !important;
+}
+.navegacion:hover {
+    color: var(--main-text) !important;
+    border-bottom: solid 2px var(--main-text);
+}
+
 form > div {
   margin-bottom: 1rem;
   background-color: var(--bg-cards);
