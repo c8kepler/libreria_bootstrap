@@ -1,45 +1,65 @@
+/*RAÍZ*/
 :root {
-/* Paleta de colores */
-    --apricot-cream: #e8c99c;
-    --olive-wood: #766741;
-    --faded-copper: #957b4b;
-    --olive-wood-2: #806443;
-    --white-sky: #ffffff;
+    --background: #FBF8F5;
+    --bg-cards: #F2EAE1;
+    --main-text: #2A1F1B;
+    --second-text: #6E5D53; 
+    --border: #E2D7CC;
+    --main-btn: #8C4A2F;
+    --second-btn: #C88A58;
+
     --fuente-principal: 'Roboto', sans-serif;
 }
 
+[data-bs-theme="dark"] { 
+    --background: #181311;  /* Fondo Base / Lienzo */
+    --bg-cards: #241C18;  /* Superficie / Tarjetas / Modales */
+    --main-text: #F3ECE4; /* Texto Principal (Encabezados y lectura) */
+    --second-text: #B5A599; /* Texto Secundario / Metadatos (Autor, género, fecha) */
+    --border: #3D312A; /* Bordes */
+    --main-btn: #D97746; /* Color directo botón (No hover) */
+    --second-btn: #E5A96E; /* Hover, etiquetas, tags */
+}
+
 body {
-    background-color: var(--apricot-cream);
+    background-color: var(--background);
     font-family: var(--fuente-principal);
-    color: #000000;
 }
 
 
 .navbar, footer {
-  background-color: var(--white-sky) !important;
+  background-color: var(--bg-cards) !important;
+}
+
+h1 {
+    color: #ffffff;
+}
+
+div div p{
+    color: #F1F5F9;
 }
 
 h2, h4 {
-  color: var(--olive-wood-2);
+  color: var(--second-text);
 }
 
 .inicio {
-    color: var(--faded-copper);
+    color: var(--main-btn);
     border: solid 2px;
-    border-color: var(--olive-wood-2);
+    border-color: var(--main-btn);
 }
 
 .inicio:hover {
-  background-color: var(--olive-wood-2);
-  border-color: var(--olive-wood-2);
-  color: var(--white-sky);
+  background-color: var(--main-text);
+  border-color: var(--main-text);
+  color: var(--background);
 }
 .navegacion {
-    color: var(--faded-copper) !important;
+    color: var(--main-btn) !important;
 }
 .navegacion:hover {
-    color: var(--olive-wood-2);
-    border-bottom: solid 2px var(--olive-wood-2);
+    color: var(--main-text) !important;
+    border-bottom: solid 2px var(--main-text);
 }
 
 
@@ -59,10 +79,10 @@ h2, h4 {
 }
 
 .tema1 {
-    background-color:  var( --olive-wood-2);
+    background-color:  var( --main-btn);
 }
 .tema2 {
-    background-color:  var( --faded-copper);
+    background-color:  var( --second-btn);
 }
 
 .resalto {
@@ -70,7 +90,7 @@ h2, h4 {
 }
 .resalto:hover {
     transform: scale(1.02) !important;
-    background-color: #f8e8d0;
+    background-color: var(--bg-cards);
 
 }
 /* Cambio de tema */
