@@ -1,0 +1,297 @@
+/*RAÍZ*/
+:root {
+    --background: #fbf8f5;
+    --bg-cards: #f2eae1;
+    --main-text: #2a1f1b;
+    --second-text: #6e5d53;
+    --border: #e2d7cc;
+    --main-btn: #8c4a2f;
+    --second-btn: #c88a58;
+
+    --fuente-principal: "Roboto", sans-serif;
+}
+
+[data-bs-theme="dark"] {
+    --background: #181311; /* Fondo Base / Lienzo */
+    --bg-cards: #241c18; /* Superficie / Tarjetas / Modales */
+    --main-text: #f3ece4; /* Texto Principal (Encabezados y lectura) */
+    --second-text: #b5a599; /* Texto Secundario / Metadatos (Autor, género, fecha) */
+    --border: #3d312a; /* Bordes */
+    --main-btn: #d97746; /* Color directo botón (No hover) */
+    --second-btn: #e5a96e; /* Hover, etiquetas, tags */
+}
+
+/*BODY*/
+body {
+    background-color: var(--background);
+    font-family: var(--fuente-principal);
+} /* Fondo más profundo y oscuro */
+
+/*TITULOS   */
+.titulo-principal {
+    text-align: center;
+}
+h1 {
+    color: var(--main-text);
+    font-weight: 800;
+    margin-top: 2rem;
+}
+
+/*ORGANIZACIÓN IMAGENES Y PORTADA*/
+.portada {
+    height: 400px;
+}
+
+/*TARJETAS*/
+.card-title {
+    min-height: 20px;
+    color: var(--main-text);
+    font-weight: 800;
+}
+.autor {
+    color: var(--second-text);
+}
+.card {
+    width: 100%;
+    height: 800px;
+    padding: 1px;
+    margin: 2rem;
+    box-shadow: 0 4px 12px var(--second-btn);
+    transition: transform 0.3 ease;
+}
+.card-text {
+    color: var(--main-text);
+    font-weight: 500;
+}
+.card-body {
+    background-color: var(--bg-cards);
+}
+.card:hover {
+    transform: scale(1.03);
+}
+.btn-solicitar {
+    background-color: var(--main-btn);
+    color: var(--main-text);
+    font-weight: 700;
+    transition: transform 0.25 ease;
+}
+.btn-solicitar:hover {
+    background-color: var(--second-btn);
+    border-color: var(--second-btn);
+    color: var(--main-text);
+    font-weight: 700;
+    transform: scale(1.05);
+}
+
+/*NAVBAR*/
+.navbar {
+    background-color: var(--bg-cards);
+}
+.inicio {
+    color: var(--main-btn);
+    border: solid 2px;
+    border-color: var(--main-btn);
+}
+
+.inicio:hover {
+    background-color: var(--main-text);
+    border-color: var(--main-text);
+    color: var(--background);
+}
+.navegacion {
+    color: var(--main-btn) !important;
+}
+.navegacion:hover {
+    color: var(--main-text) !important;
+    border-bottom: solid 2px var(--main-text);
+}
+
+/*MODAL Y FORMULARIO*/
+.modal-content {
+    background-color: var(--bg-cards);
+}
+.modal-title {
+    color: var(--main-text);
+    font-weight: 800;
+}
+.btn-modal {
+    background-color: var(--main-btn);
+    color: var(--main-text);
+    font-weight: 700;
+}
+.btn-modal:hover {
+    background-color: var(--second-btn);
+    color: var(--main-text);
+}
+.btn-secondary {
+    background-color: var(--second-btn);
+    color: var(--main-text);
+    font-weight: 700;
+}
+.btn-secondary:hover {
+    background-color: var(--main-btn);
+    color: var(--main-text);
+}
+form {
+    background-color: var(--background);
+}
+form label {
+    color: var(--second-text);
+    font-weight: 600;
+}
+form input {
+    background-color: var(--background);
+}
+form textarea {
+    background-color: var(--background);
+}
+.form-check {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+.form-check-label {
+    font-weight: 900;
+    margin-bottom: 2rem;
+}
+.form-check-input {
+    background-color: var(--background);
+    margin-left: 5rem;
+}
+.etiqueta div {
+    display: block;
+    text-align: center;
+}
+.etiqueta label {
+    text-align: center;
+    padding-bottom: 0.5rem;
+}
+.etiqueta input {
+    width: 75%;
+}
+.etiqueta area {
+    margin-top: 5rem;
+}
+.comentario {
+    margin: 5rem;
+    margin-top: 1rem;
+}
+.area {
+    width: 100%;
+}
+.nombre {
+    margin-top: 2rem;
+}
+
+input::placeholder {
+    color: var(--second-text);
+}
+textarea::placeholder {
+    color: var(--second-text);
+}
+
+/*LOGO*/
+.logo {
+    width: 100px;
+    height: 80px;
+    object-fit: contain;
+}
+
+/*BOTON CAMBIAR COLOR*/
+.tema-switch {
+    position: relative;
+    display: inline-block;
+    width: 3.5rem;
+    height: 1.6rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.tema-switch-input {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    margin: 0;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.tema-switch-slider {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0.5rem;
+    overflow: hidden;
+    border-radius: 999px;
+    background-color: #a9c7f5;
+    transition: background-color 0.25s ease;
+}
+
+.tema-switch-slider::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0.2rem;
+    z-index: 2;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    background-color: #ffffff;
+    transform: translateY(-50%);
+    transition: 0.25s ease;
+}
+
+.tema-switch-luna,
+.tema-switch-sol {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1rem;
+    font-size: 0.8rem;
+    line-height: 1;
+    color: #ffffff;
+    transition: opacity 0.25s ease;
+}
+
+.tema-switch-luna {
+    margin-left: auto;
+    opacity: 0;
+}
+
+.tema-switch-sol {
+    margin-right: auto;
+    opacity: 1;
+}
+
+/* Estado oscuro del interruptor */
+.tema-switch-input:checked + .tema-switch-slider {
+    background-color: #111044;
+}
+
+.tema-switch-input:checked + .tema-switch-slider::before {
+    transform: translate(1.75rem, -50%);
+}
+
+.tema-switch-input:checked + .tema-switch-slider .tema-switch-luna {
+    opacity: 1;
+}
+
+.tema-switch-input:checked + .tema-switch-slider .tema-switch-sol {
+    opacity: 0;
+}
+
+.tema-switch-input:focus-visible + .tema-switch-slider {
+    outline: 3px solid var(--bs-primary);
+    outline-offset: 3px;
+}
+
+/*FOOTER*/
+.footer {
+    background-color: var(--bg-cards);
+}
