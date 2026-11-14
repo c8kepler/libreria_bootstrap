@@ -117,17 +117,14 @@ main > a {
   text-align: center;
 }
 
-p {
-  margin-top: 1rem;
-  text-align: center;
-}
 
 #selectColor {
     position: fixed;
     top: 1rem;
     right: 1rem;    
 }
-.container {
+
+.tarjeta-centro {
   display: flex;
   justify-content: center;
 }
